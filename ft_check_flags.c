@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_check_flags.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcabanas <pcabanas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 16:34:50 by pcabanas          #+#    #+#             */
-/*   Updated: 2024/03/15 18:29:43 by pcabanas         ###   ########.fr       */
+/*   Created: 2024/03/15 18:39:02 by pcabanas          #+#    #+#             */
+/*   Updated: 2024/03/15 18:48:23 by pcabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-//Prints a character and returns '1' int
-int	ft_putchar(char c)
+int	ft_check_flags(const char flag, va_list ptr)
 {
-	write(1, &c, 1);
-	return (1);
+	if (flag == '%')
+		count += ft_putchar('%'),
+
+	printf ("%d", va_arg(ptr, int)); //BORRAR
+	return (2);
 }
+
+/*int	main()
+{
+
+}*/
