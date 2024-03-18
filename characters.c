@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   characters.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcabanas <pcabanas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 11:40:53 by pcabanas          #+#    #+#             */
-/*   Updated: 2024/03/18 20:52:20 by pcabanas         ###   ########.fr       */
+/*   Created: 2024/03/13 16:34:50 by pcabanas          #+#    #+#             */
+/*   Updated: 2024/03/18 20:52:04 by pcabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdarg.h>
+//Prints a character and returns '1' int
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	printf("\n");
+	return (1);
+}
 
-int	ft_printf(const char *format, ...);
-int	ft_check_flags(const char flag, va_list ptr, int count);
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_puthex(int arg, char *dictionary);
+int	ft_putstr(char *s)
+{
 
-#endif
+}
