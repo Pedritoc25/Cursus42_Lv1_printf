@@ -6,7 +6,7 @@
 /*   By: pcabanas <pcabanas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 15:55:40 by pcabanas          #+#    #+#             */
-/*   Updated: 2024/03/18 20:31:43 by pcabanas         ###   ########.fr       */
+/*   Updated: 2024/03/19 16:28:26 by pcabanas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			count = ft_check_flags(format[i + 1], ptr, count);
+			count += ft_check_flags(format[i + 1], ptr);
 			i++;
 			printf("debug 30.ft_printf\n"); //BORRAR
 		}
@@ -35,15 +35,14 @@ int	ft_printf(const char *format, ...)
 		printf("Current count = %d\n", count); //BORRAR
 		i++;
 	}
-
 	va_end(ptr);
 	return (count);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	count;
 	count = ft_printf("%d3\n", 777);
 	printf("Printf count = %d\n", count);
 	//printf("Hola, agente %d. Bienvenido a %d.\n", 777, 42);
-}
+}*/
